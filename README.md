@@ -73,9 +73,10 @@ customKeys | object / boolean | false | Pass an object to change the default opt
 ajax | boolean / object | false | Whether to enable ajax. The library supports asynchronous calls through fetch API. Available default properties of ajax object: ``{ url: '', headers: {}, debounce: 200, fetchOnSearch: false, q: "", nestedKey: false, searchPrompt: true, minLength: 1  }.`` You can find details for all the ajax object properties, in the next section and in our demo page.
 onRenderOption | function / boolean | false | Use this function to render custom option items
 onRenderSelection | function / boolean | false | Use this function to render custom selected items
+onBlur | function | undefined | Use this callback to catch Select's blur trigger.
 onChange | function | undefined | Use this callback to catch Select's change trigger.
-onOpen | function | undefined | Use this callback to catch Select's open trigger.
 onClose | function | undefined | Use this callback to catch Select's close trigger.
+onOpen | function | undefined | Use this callback to catch Select's open trigger.
 
 ## Ajax prop - breakdown
 

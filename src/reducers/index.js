@@ -48,9 +48,10 @@ const initialState = {
 		resultSet: []
 	},
 	ajax: false,
+  onBlur: () => {},
 	onChange: () => {},
-	onOpen: () => {},
-	onClose: () => {}
+  onClose: () => {},
+  onOpen: () => {}
 };
 
 const reducer = ( state = initialState, action ) => {
@@ -161,9 +162,10 @@ const reducer = ( state = initialState, action ) => {
 				customKeys: action.customKeys,
 				ajax: action.ajax,
 				initialized: true,
+				onBlur: action.props.onBlur,
 				onChange: action.props.onChange,
-				onOpen: action.props.onOpen,
-				onClose: action.props.onClose,
+        onClose: action.props.onClose,
+        onOpen: action.props.onOpen,
 				checkForScroll: action.type === UPDATE_INSTANCE ? state.isOpen : action.props.isOpen,
 				onRenderOption: action.props.onRenderOption,
 				onRenderSelection: action.props.onRenderSelection,

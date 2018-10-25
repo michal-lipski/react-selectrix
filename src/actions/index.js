@@ -560,9 +560,13 @@ export const focusSelect = () => {
 
 export const blurSelect = () => {
 
-	return {
-		type: BLUR_SELECT
-	}
+  return ( dispatch, getState ) => {
+    dispatch( {
+      type: BLUR_SELECT
+    } );
+
+    getState().onBlur();
+  }
 
 }
 

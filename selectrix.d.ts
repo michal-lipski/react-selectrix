@@ -19,6 +19,7 @@ declare module "react-selectrix" {
     lifo?: boolean;
     materialize?: boolean;
     multiple?: boolean;
+    onBlur?: Function;
     onChange?: Function;
     onClose?: Function;
     onOpen?: Function;
